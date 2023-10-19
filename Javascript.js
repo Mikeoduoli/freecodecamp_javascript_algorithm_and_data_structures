@@ -419,3 +419,13 @@ function remove(arr, bookName) {
         return newArray;
 
     };
+
+    //Concat to merge new array items
+
+    function mergeArrays (arr1, arr2) {
+        return arr1.concat(arr2);
+    }
+
+    const ar1 = [1, 2, 3];
+    const ar2 = [4, 5];
+    mergeArrays(ar1, ar2);
