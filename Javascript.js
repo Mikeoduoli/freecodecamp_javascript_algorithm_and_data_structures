@@ -600,3 +600,30 @@ function remove(arr, bookName) {
 
       nonMutatingSort(globalArray);
 
+
+      //Combining an Array into a String Using the join Method
+      const arr = ["Hello", "World"];
+      const str = arr.join(" ");
+
+      //Hello World
+
+      //Example 2
+      function sentensify (str) {
+        return str.split(/\W/).join(" ");
+      }
+
+      sentensify("May-the-force-be-with-you");
+
+      //Apply Functional Programming to Convert Strings to URL Slugs
+
+      function urlSlug(title) {
+        return title
+                .toLowerCase()
+                .trim()
+                .split(/\s_/)
+                .join('-')
+      };
+
+
+      urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+
