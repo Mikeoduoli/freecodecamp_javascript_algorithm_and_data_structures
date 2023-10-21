@@ -627,3 +627,24 @@ function remove(arr, bookName) {
 
       urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
 
+
+    //   Use the every Method to Check that Every Element in an Array Meets a Criteria
+
+    function checkPositive (arr) {
+        return arr.every(function (positive) {
+            return positive > 0;
+        });
+    };
+
+    checkPositive([1, 2, 3, -4, 5]);
+
+    // Use the some Method to Check that Every Element in an Array Meets a Criteria
+
+    function checkPositive (arr) {
+        return arr.some(function (someCheck) {
+            return someCheck > 0;
+        });
+    };
+
+    checkPositive([1, 2, 3, -4, 5]);
+
