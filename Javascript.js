@@ -660,3 +660,11 @@ function remove(arr, bookName) {
 
     add(10)(20)(30);
 
+//Intermediate algorithm Scripting
+
+function destroyer (arr) {
+    const valsToRemove = Array.from(arguments).slice(1);
+    return arr.filter(function(val) {
+        return !valsToRemove.includes(val);
+    }); 
+}
