@@ -669,4 +669,27 @@ function destroyer (arr) {
     }); 
 }
 
-//
+//Where Art Thou
+function whatIsInAName (collection, source) {
+    let keys = Object.keys(source)
+    return collection.filter(
+        item => keys.every (
+            key => item.hasOwnProperty(key) && item[key] === source[key]
+        )
+    )
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null },
+ { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+ //Spinal Tap Case
+ //Convvert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes
+
+ function spinalCase(str) {
+    return str
+        .replace(/([a-z])([A-Z])/g, "$1-$2")
+        .replace(/[^a-z\d]/ig, "-")
+        .toLowerCase()
+ }
+
+ console.log(spinalCase('This Is Spinal Tap'))
