@@ -697,7 +697,7 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
 
  //Pig Latin - Away of altering English Words
  function translatePigLatin(str) {
-    let consonantRegex = /^[^aeiou] +/;
+    let consonantRegex = /^[^aeiou]+/;
     let myConsonants = str.match(consonantRegex);
     return myConsonants !== null
       ? str
