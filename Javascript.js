@@ -693,3 +693,18 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
  }
 
  console.log(spinalCase('This Is Spinal Tap'))
+
+
+ //Pig Latin - Away of altering English Words
+ function translatePigLatin(str) {
+    let consonantRegex = /^[^aeiou] +/;
+    let myConsonants = str.match(consonantRegex);
+    return myConsonants !== null
+      ? str
+          .replace(consonantRegex, "")
+          .concat(myConsonants)
+          .concat("ay")
+      : str.concat("way")
+  }
+  
+  console.log(translatePigLatin("consonant"));
