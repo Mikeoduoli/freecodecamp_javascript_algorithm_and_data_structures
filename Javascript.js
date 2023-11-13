@@ -769,3 +769,33 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   }
   
   console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+
+  //Converting HTML Entities
+  function convertHTML(str) {
+
+    let temp = str.split("")
+  
+    for (let i = 0; i < temp.length; i++) {
+      switch(temp[i]){
+        case "<":
+          temp[i] = "&alt;";
+          break;
+        case "&":
+          temp[i] = "&amp;";
+          break;
+        case ">":
+          break;
+        case '"':
+          temp[i] = "&quot;";
+          break;
+        case "'":
+          temp[i] = "&apos;";
+          break;
+      }
+    }
+    temp = temp.join("")
+    return temp;
+  }
+  
+  console.log(convertHTML("Dolce & Gabbana"));
