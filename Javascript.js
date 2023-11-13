@@ -779,7 +779,7 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
     for (let i = 0; i < temp.length; i++) {
       switch(temp[i]){
         case "<":
-          temp[i] = "&alt;";
+          temp[i] = "&lt;";
           break;
         case "&":
           temp[i] = "&amp;";
@@ -799,3 +799,23 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   }
   
   console.log(convertHTML("Dolce & Gabbana"));
+
+
+  //Sum of All Odd Fibonacci Numbers
+  function sumFibs(num) {
+    let prevNumber = 0;
+    let currNumber = 1;
+    let result = 0;
+    while (currNumber <= num) {
+      if (currNumber % 2 !== 0) {
+        result += currNumber;
+      }
+      currNumber += prevNumber;
+      prevNumber = currNumber - prevNumber;
+    }
+  
+    return result;
+  }
+  
+
+  console.log(sumFibs(4));
