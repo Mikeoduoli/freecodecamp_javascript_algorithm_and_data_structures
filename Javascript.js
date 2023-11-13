@@ -870,3 +870,18 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   }
   
   console.log(dropElements([1, 2, 3], function(n) {return n < 3; }));
+
+  //Flattening An Array - Check if Array is an Array
+  function steamrollArray(arr) {
+    const flattenedArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      if(Array.isArray(arr[i])){
+        flattenedArray.push(...steamrollArray(arr[i]));
+      } else {
+        flattenedArray.push(arr[i]);
+      }
+    }
+    return flattenedArray;
+  }
+  
+  console.log(steamrollArray([1, [2], [3, [[4]]]]));
