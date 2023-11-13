@@ -843,7 +843,7 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   
   console.log(sumPrimes(10));
 
-  //Smallest Common Multiple
+  //Smallest Common Multiple Challenge
   function smallestCommons(arr) {
     const [min, max] = arr.sort((a, b) => a -b);
     const range = Array(max-min +1)
