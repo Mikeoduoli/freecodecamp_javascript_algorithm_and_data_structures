@@ -831,6 +831,7 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
       return true
     }
   
+    //Checking for Prime Factors
     let sum  = 0
     for (let i = 2; i <= num; i++) {
       if (isPrime(i))
@@ -841,3 +842,21 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   }
   
   console.log(sumPrimes(10));
+
+  //Smallest Common Multiple
+  function smallestCommons(arr) {
+    const [min, max] = arr.sort((a, b) => a -b);
+    const range = Array(max-min +1)
+      .fill(0)
+      .map((_, i) => i + min);
+    const upperBound = range.reduce((prod, curr) => prod * curr);
+    
+    for (let multiple = max; multiple <= upperBound; multiple += max) {
+      const divisible = range.every((value) => multiple % value ===0);
+      if(divisible){
+        return multiple;
+      }
+    }
+  }
+  
+  console.log(smallestCommons([1,5]));
