@@ -929,3 +929,38 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   }
   
   console.log(addTogether(2,3));
+
+  //Make a person - Declaring variables in closures which are not properties.
+  const Person = function(first, last) {
+    let firstName = first;
+    let lastName = last;
+  
+    this.getFirstName = function() {
+      return firstName;
+    };
+  
+    this.getLastName = function() {
+      return lastName;
+    };
+  
+    this.getFullName = function() {
+      return this.getFirstName() + " " + this.getLastName();
+    };
+  
+    this.setFirstName = function(first) {
+      return firstName = first;
+    };
+  
+    this.setLastName = function(last){
+      return lastName = last;
+    };
+  
+    this.setFullName = function(first, last) {
+      this.setFirstName(first);
+      this.setLastName(last);
+      return this.getFullName();
+    };
+  };
+  
+  const bob = new Person("Bob", "Ross")
+  console.log(bob.getFullName());
