@@ -964,3 +964,25 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   
   const bob = new Person("Bob", "Ross")
   console.log(bob.getFullName());
+
+  //Using the Math library i.e,
+  function orbitalPeriod(arr) {
+    const GM = 398600.4418;
+    const earthRadius = 6367.4447;
+   
+    let T = null;
+    const newArray = [];
+  
+    for (let elem of arr) {
+      T = 2*Math.PI * Math.sqrt(Math.pow(elem.avgAlt + earthRadius, 3)/GM);
+      newArray.push({name: elem.name, orbitalPeriod: Math.round(T)});
+    }
+    return newArray;
+    // orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+  }
+  
+  console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+
+
+  //Projects 1 of 5
+  
