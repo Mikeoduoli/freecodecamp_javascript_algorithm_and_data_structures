@@ -885,3 +885,47 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   }
   
   console.log(steamrollArray([1, [2], [3, [[4]]]]));
+
+  //Binary Conversion
+  function binaryAgent(str) {
+    var biString = str.split(" ");
+    var uniString = [];
+  
+    for (let i=0; i < biString.length; i++){
+      uniString.push(String.fromCharCode(parseInt(biString[i], 2)))
+    }
+    return uniString.join("");
+  }
+  
+  console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+
+  //
+  function truthCheck(collection, pre) {
+    let counter = 0;
+  
+    for (let c in collection) {
+      if (collection[c].hasOwnProperty(pre) && Boolean(collection[c][pre])) {
+        counter++;
+      }
+    }
+    return counter == collection.length;
+  }
+  
+  console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot"));
+
+  //Arguments - Check if the numbers are actual.
+  function addTogether() {
+    const [first, second] = arguments;
+  
+    function addSecond(second) {
+      if (typeof (second) === "number") return first + second;
+    }
+  
+    if (typeof (first) === "number") {
+      if (arguments.length === 1) return addSecond;
+      if (arguments.length === 2) return addSecond(second);
+    }
+    // return addSecond;
+  }
+  
+  console.log(addTogether(2,3));
