@@ -986,3 +986,56 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
 
   //Projects 1 of 5
   
+  
+  //Projects 2 of 5
+  function convertToRoman(num) {
+    let romanNumerals = {
+      M:1000,
+      CM:900,
+      D:500,
+      CD:400,
+      C:100,
+      XC:90,
+      L:50,
+      XL:40,
+      X:10,
+      IX:9,
+      V:5,
+      IV:4,
+      I:1
+    }
+    
+    let result = "";
+    //Loop through
+    for(let prop in romanNumerals) {
+      while(num >= romanNumerals[prop]){
+        result += prop;
+        num -= romanNumerals[prop];
+      }
+    }
+  
+   return result;
+  }
+  
+  console.log(convertToRoman(97));
+
+  //Caesers Cipher ROT13 encryption
+  function rot13(str) {
+    let result = "";
+    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+    for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+      let index = alphabet.indexOf(char);
+  
+      if (index !== -1) {
+        let newIndex = (index + 13) % 26;
+        result += alphabet[newIndex];
+      } else {
+        result += char;
+      }
+    }
+    return result;
+  }
+  
+  console.log(rot13("SERR PBQR PNZC"));
