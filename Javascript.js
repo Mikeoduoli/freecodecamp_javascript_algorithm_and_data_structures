@@ -1119,3 +1119,8 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   else {
     console.log("All false");
   }
+
+  // Creating Objects
+  var company = new Object();
+  company.name = "Twitter";
+
