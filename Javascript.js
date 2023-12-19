@@ -1124,3 +1124,23 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
   var company = new Object();
   company.name = "Twitter";
 
+//Functions - Objects and First-Class Data Types 
+function multiply (x, y){
+  return x * y;
+}
+
+console.log(multiply());
+
+//Faction Factory
+function makeMultiplier (multiplier){
+    var myFunct = function(x){
+      return multiplier * x;
+    };
+
+    return myFunct;
+}
+
+var multiplyBy3 = makeMultiplier(3);
+console.log(multiplyBy3(10));
+var doubleAll = makeMultiplier(2);
+console.log(doubleAll(100));
