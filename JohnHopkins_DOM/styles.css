@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+}
+
+#content {
+    margin-left: 40px;
+    margin-top: 40px;
+    font-size: 30px;
+    color: blueviolet;
+}
