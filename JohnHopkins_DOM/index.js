@@ -25,11 +25,23 @@ document.addEventListener("DOMContentLoaded",
                     .textContent = title;
             }
         } 
+        // Event Handling
+        document.querySelector("button")
+            .addEventListener("click", sayHello);
+        
+            document.querySelector("body")
+            .addEventListener("mousemove", 
+                function (event) {
+                    if(event.shiftKey === true) {
+                        console.log("x: " + event.clientX);
+                        console.log("y: " + event.clientY);
+                    }
+                }
+            );
+
+        
     }
     );
 
 
 
-//Event Handling
-// document.querySelector("button")
-//     .addEventListener("click", sayHello);
