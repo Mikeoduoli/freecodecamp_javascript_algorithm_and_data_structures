@@ -13,10 +13,14 @@ function sayHello() {
 
     if(name === "student"){
         var title =
-            document.querySelector("#title")
+        document
+            .querySelector("#title")
             .textContent;
         title += " & Loving It!"
         document.querySelector("#title")
             .textContent = title;
     }
 } 
+
+
+//Event Handling
