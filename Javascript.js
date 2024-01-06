@@ -1166,3 +1166,14 @@ console.log(myProp1);
 
 let teamsProp = [["Chicago", 1], ["76ers", 2]];
 console.log(teamsProp);
+
+
+
+let btnSubmit = document.getElementById("btn-submit");
+
+
+btnSubmit.addEventListener("click", function() {
+  alert("Hello JavaScript Developer!")
+});
+
+btnSubmit();

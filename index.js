@@ -39,7 +39,12 @@ document.addEventListener("DOMContentLoaded",
                 }
             );
 
-        
+        let btnSubmit = document.getElementById("btn-submit");
+
+
+    btnSubmit.addEventListener("click", function() {
+    alert("Hello JavaScript Developer!")
+    });
     }
     );
 
