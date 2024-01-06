@@ -1144,3 +1144,25 @@ var multiplyBy3 = makeMultiplier(3);
 console.log(multiplyBy3(10));
 var doubleAll = makeMultiplier(2);
 console.log(doubleAll(100));
+
+
+function functionName () {
+  console.log("Hi World!")
+}
+
+functionName();
+
+//Accessing JavaScript Object properties with Dot Notation
+const myObj ={
+  prop1: "val1",
+  prop2: "val2"
+};
+
+myProp1 = myObj.prop1;
+
+console.log(myProp1);
+
+//Multi-Dimensional Array/Nested Array
+
+let teamsProp = [["Chicago", 1], ["76ers", 2]];
+console.log(teamsProp);
