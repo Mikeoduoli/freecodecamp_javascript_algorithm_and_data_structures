@@ -1177,3 +1177,19 @@ btnSubmit.addEventListener("click", function() {
 });
 
 btnSubmit();
+
+// Lexical this
+const dogBreed = {
+  species1: "Doberman",
+  purpose: "Hunter",
+  species3: "Beagle",
+  toKind: function () {
+    // console.log(`${this.species1} is a ${this.purpose}.`)
+    this.purpose.forEach(function(purpose) {
+      console.log(`${this.species1} is a ${purpose}`);
+    }.bind(this))
+  }
+}
+
+dogBreed.toKind();
+
