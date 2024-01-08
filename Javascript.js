@@ -1193,3 +1193,40 @@ const dogBreed = {
 
 dogBreed.toKind();
 
+//Using the map Method to Extract Data from an Array
+
+const techStack = [
+  {
+    "Stack" : "JavaScript",
+    "Application" : "Web, Mobile, Data Analysis, Machine Learning",
+    "Why" : "Mini-Swiss Army Knife - Language of the web"
+  },
+  {
+    "Stack" : "Python",
+    "Application" : "Everything in Software Engineering, Data Science to Security Analysis",
+    "Why" : "Swiss Army Knife - General Programming"
+},
+{
+  "Stack" : "Java",
+  "Application" : "Mobile, Game Development, Data Engineering, Machine Learning, Database Management",
+  "Why" : "Strict Fellow - Know Concise Well"
+},
+{
+  "Stack" : "R",
+  "Application" : "Statistical Analysis, Data Science/Analysis, Financial Engineering",
+  "Why" : "Statiscal Packages - Large Language Model (LLM)"
+},
+{
+  "Stack" : "SEQUEL (SQL)",
+  "Application" : "Databases, Data Analysis, Data Science, Security Analysis",
+  "Why": "The bread and butter of data"
+},
+{
+  "Stack": "Excell & Access",
+  "Application" : "Small to medium Data Management, Data Analysis Financial Analysis",
+  "Why" : "Never bring a toy gun in a gun fight"
+}
+]; 
+
+let yourWeapon = techStack.map(weapon => (weapon.Stack));
+console.log(yourWeapon);
