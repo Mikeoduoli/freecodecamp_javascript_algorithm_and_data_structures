@@ -1228,5 +1228,5 @@ const techStack = [
 }
 ]; 
 
-let yourWeapon = techStack.map(weapon => (weapon.Stack));
+let yourWeapon = techStack.map(weapon => weapon.Application);
 console.log(yourWeapon);

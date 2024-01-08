@@ -1,5 +1,5 @@
 (function (global) {
-    var ajaUtils = {};
+    var ajaxUtils = {};
 
     //Returning HTTP request object
     function getRequestObject() {
@@ -18,7 +18,7 @@
 
 
     //Makes an Ajax GET request to 'requesturl'
-    ajaUtils.sendGetRequest = 
+    ajaxUtils.sendGetRequest = 
         function (requestUrl, responseHandler) {
             var request = getRequestObject();
             myHandler = responseHandler
