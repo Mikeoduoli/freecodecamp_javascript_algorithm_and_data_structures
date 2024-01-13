@@ -569,7 +569,7 @@ function remove(arr, bookName) {
         return averageRating;
       }
       
-      console.log(getRating(watchList));
+      console.log(getRating());
 
       //Higher - Order Functions using filter(), map() and reduce()
       const squareList = arr => {
@@ -1228,5 +1228,22 @@ const techStack = [
 }
 ]; 
 
-let yourWeapon = techStack.map(weapon => weapon.Application);
+let yourWeapon = techStack.map(weapon = () => weapon.Application);
 console.log(yourWeapon);
+
+//Working with filter()
+
+
+
+
+// Working with arrow functions
+const powers = [1,2,3,4,5].map((number, index) => Math.pow(number, index));
+
+const add = (n1, n2) => n1 + n2;
+
+const milesToKm = miles => miles * 1.60934;
+
+console.log(milesToKm(90));
+
+
+// 
