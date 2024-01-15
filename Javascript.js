@@ -1246,4 +1246,9 @@ const milesToKm = miles => miles * 1.60934;
 console.log(milesToKm(90));
 
 
-// 
+// Working around Constructor functions - Creating new objects
+
+function Developer() {
+  this.name = "Obed";
+  this.skills = "JavaScript"
+}
