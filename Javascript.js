@@ -1252,3 +1252,8 @@ function Developer() {
   this.name = "Obed";
   this.skills = "JavaScript"
 }
+
+//Create an object to the above class
+const tech = new Developer();
+console.log(tech);
+
