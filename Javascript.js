@@ -1167,10 +1167,8 @@ console.log(myProp1);
 let teamsProp = [["Chicago", 1], ["76ers", 2]];
 console.log(teamsProp);
 
-
-
+// DOM
 let btnSubmit = document.getElementById("btn-submit");
-
 
 btnSubmit.addEventListener("click", function() {
   alert("Hello JavaScript Developer!")
@@ -1184,10 +1182,11 @@ const dogBreed = {
   purpose: "Hunter",
   species3: "Beagle",
   toKind: function () {
+    // const that = this;
     // console.log(`${this.species1} is a ${this.purpose}.`)
-    this.purpose.forEach(function(purpose) {
-      console.log(`${this.species1} is a ${purpose}`);
-    }.bind(this))
+    this.purpose.forEach((purpose) => {
+      console.log(`${that.species1} is a ${purpose}`);
+    });
   }
 }
 
@@ -1214,7 +1213,7 @@ const techStack = [
 {
   "Stack" : "R",
   "Application" : "Statistical Analysis, Data Science/Analysis, Financial Engineering",
-  "Why" : "Statiscal Packages - Large Language Model (LLM)"
+  "Why" : "Statiscal Packages - Good for big Statistical data"
 },
 {
   "Stack" : "SEQUEL (SQL)",
@@ -1222,8 +1221,8 @@ const techStack = [
   "Why": "The bread and butter of data"
 },
 {
-  "Stack": "Excell & Access",
-  "Application" : "Small to medium Data Management, Data Analysis Financial Analysis",
+  "Stack": "Excel & Access",
+  "Application" : "Small to medium Data Management, Data Analysis, Financial Analysis",
   "Why" : "Never bring a toy gun in a gun fight"
 }
 ]; 
@@ -1250,7 +1249,7 @@ console.log(milesToKm(90));
 
 function Developer() {
   this.name = "Obed";
-  this.skills = "JavaScript"
+  this.skills = "Vanilla JS", "ReactJS", "Tailwind", "CSS3", "HTML5"
 }
 
 //Create an object to the above class
@@ -1259,3 +1258,21 @@ console.log(tech);
 
 // Working With APIs (Application Programming Interface)
 
+//Working with Rest Operator -Without
+const sum = (function() {
+  return function sum (x,y,z) {
+    const args = [x, y, z];
+    return args.reduce((a,b) => a +b, 0);
+  };
+}());
+
+console.log(sum(1, 2, 3));
+
+// With Rest Operator
+const summ = (function () {
+  return function summ (...args1) {
+    return args1.reduce((a,b) => a +b, 0);
+  };
+} ());
+
+console.log(summ(1, 2, 3, 5));
