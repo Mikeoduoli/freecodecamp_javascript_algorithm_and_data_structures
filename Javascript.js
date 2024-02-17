@@ -1256,8 +1256,6 @@ function Developer() {
 const tech = new Developer();
 console.log(tech);
 
-// Working With APIs (Application Programming Interface)
-
 //Working with Rest Operator -Without
 const sum = (function() {
   return function sum (x,y,z) {
@@ -1276,3 +1274,22 @@ const summ = (function () {
 } ());
 
 console.log(summ(1, 2, 3, 5));
+
+
+// Working With APIs (Application Programming Interface) With Node.JS and Express JS
+fetch("http://127.0.0.1")
+header: "HEAD"
+
+let http = require("http");
+let server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    // ...
+  }
+
+  if (req.url === '/api/courses') {
+    // ...
+  }
+});
+
+server.listen(3000); 
+
